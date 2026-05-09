@@ -6,10 +6,9 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #e9e9e9;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
 }
 
 /* HEADINGS */
@@ -23,20 +22,22 @@ h2,
 /* HEADER */
 
 header {
-    background-color: #222;
+    background-color: #1f1f1f;
     color: white;
-    position: relative;
+    margin-top: 1rem;
 }
+
+/* LOGO */
 
 .logo-box {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .8rem;
     padding: 1rem;
 }
 
 .logo-box img {
-    width: 50px;
+    width: 45px;
 }
 
 .logo-box span {
@@ -48,12 +49,14 @@ header {
 
 #menu {
     position: absolute;
-    top: 15px;
-    right: 20px;
+    top: 25px;
+    right: 25px;
 
     background: none;
     border: none;
+
     color: white;
+
     font-size: 2rem;
 
     cursor: pointer;
@@ -92,14 +95,14 @@ header {
 /* MAIN */
 
 main {
-    margin-top: 1rem;
+    padding: 1rem;
 }
 
 h1 {
     margin-bottom: 1rem;
 }
 
-/* TOP SECTIONS */
+/* TOP */
 
 .top-sections {
     display: grid;
@@ -108,48 +111,36 @@ h1 {
 
 /* CARDS */
 
-.card {
-    background-color: white;
-    border-radius: 10px;
+.card,
+.certificate {
+    background-color: #f5f5f5;
+    border-radius: 8px;
     overflow: hidden;
 }
 
 .card h2,
 .certificate h2 {
-    background-color: #222;
+    background-color: #1f1f1f;
     color: white;
     text-align: center;
-    padding: .8rem;
+    padding: .7rem;
 }
 
 .card p {
     padding: 1rem;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 /* PHOTO */
 
-.photo-card img {
-    width: 100%;
-    max-width: 250px;
-
-    display: block;
-
-    margin: 1rem auto;
-
-    border-radius: 10px;
+.photo-card {
+    text-align: center;
 }
 
-/* CERTIFICATE */
-
-.certificate {
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-
-    margin-top: 1rem;
-
-    padding-bottom: 1rem;
+.photo-card img {
+    width: 200px;
+    margin: 1rem auto;
+    border-radius: 8px;
 }
 
 /* BUTTONS */
@@ -157,51 +148,39 @@ h1 {
 .buttons {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: .5rem;
-
+    gap: .7rem;
     margin: 1rem;
+    flex-wrap: wrap;
 }
 
 .buttons button {
-    padding: .8rem 1.5rem;
-
-    border: none;
-
-    background-color: #222;
-
+    background-color: #1f1f1f;
     color: white;
-
-    border-radius: 5px;
-
+    border: none;
+    padding: .8rem 2rem;
+    border-radius: 4px;
     cursor: pointer;
-
     font-weight: bold;
 }
 
 .buttons button:hover {
-    background-color: #555;
+    background-color: #444;
 }
 
 /* COURSES */
 
 #courses {
     display: grid;
-    gap: 1rem;
-
+    gap: .7rem;
     padding: 1rem;
 }
 
 .course-card {
-    background-color: #ddd;
-
     padding: 1rem;
-
-    border-radius: 8px;
-
+    border-radius: 4px;
     text-align: center;
-
     font-weight: bold;
+    background-color: #d6d6d6;
 }
 
 .completed {
@@ -213,39 +192,38 @@ h1 {
 
 #credits {
     text-align: center;
+    padding-bottom: 1rem;
     font-weight: bold;
 }
 
 /* FOOTER */
 
 footer {
-    margin-top: 2rem;
-
-    background-color: #222;
-
+    background-color: #1f1f1f;
     color: white;
-
+    margin-top: 1rem;
     text-align: center;
-
     padding: 1rem;
 }
 
-/* SOCIAL ICONS */
+/* SOCIALS */
 
 .socials {
     display: flex;
     justify-content: center;
     gap: 1rem;
-
     margin-bottom: 1rem;
 }
 
 .socials img {
-    width: 35px;
-
+    width: 32px;
     transition: transform .3s ease;
 }
 
 .socials img:hover {
-    transform: scale(1.15);
+    transform: scale(1.1);
+}
+
+footer p {
+    margin-top: .5rem;
 }

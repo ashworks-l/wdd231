@@ -1,56 +1,48 @@
 const courses = [
-
     {
         subject: 'CSE',
         number: 110,
         credits: 2,
         completed: true
     },
-
     {
         subject: 'WDD',
         number: 130,
         credits: 2,
         completed: true
     },
-
     {
         subject: 'CSE',
         number: 111,
         credits: 2,
         completed: false
     },
-
     {
         subject: 'CSE',
         number: 210,
         credits: 2,
         completed: false
     },
-
     {
         subject: 'WDD',
         number: 131,
         credits: 2,
         completed: true
     },
-
     {
         subject: 'WDD',
         number: 231,
         credits: 2,
         completed: false
     }
-
 ];
 
-const courseContainer = document.querySelector("#courses");
-
-const creditsContainer = document.querySelector("#credits");
+const coursesContainer = document.querySelector("#courses");
+const credits = document.querySelector("#credits");
 
 function displayCourses(courseList) {
 
-    courseContainer.innerHTML = "";
+    coursesContainer.innerHTML = "";
 
     courseList.forEach(course => {
 
@@ -59,44 +51,37 @@ function displayCourses(courseList) {
         card.classList.add("course-card");
 
         if (course.completed) {
-
             card.classList.add("completed");
         }
 
-        card.innerHTML =
-        `${course.subject} ${course.number}`;
+        card.innerHTML = `
+            ${course.subject} ${course.number}
+        `;
 
-        courseContainer.appendChild(card);
+        coursesContainer.appendChild(card);
 
     });
 
-    const totalCredits = courseList.reduce((sum, course) => {
+    const totalCredits = courseList.reduce(
+        (sum, course) => sum + course.credits,
+        0
+    );
 
-        return sum + course.credits;
-
-    }, 0);
-
-    creditsContainer.textContent =
-    `The total credits for course listed above is ${totalCredits}`;
+    credits.textContent =
+        `The total credits for courses listed above is ${totalCredits}`;
 }
 
 displayCourses(courses);
 
-/* BUTTON EVENTS */
-
 document.querySelector("#all").addEventListener("click", () => {
-
     displayCourses(courses);
-
 });
 
 document.querySelector("#cse").addEventListener("click", () => {
 
-    const cseCourses = courses.filter(course => {
-
-        return course.subject === "CSE";
-
-    });
+    const cseCourses = courses.filter(
+        course => course.subject === "CSE"
+    );
 
     displayCourses(cseCourses);
 
@@ -104,11 +89,9 @@ document.querySelector("#cse").addEventListener("click", () => {
 
 document.querySelector("#wdd").addEventListener("click", () => {
 
-    const wddCourses = courses.filter(course => {
-
-        return course.subject === "WDD";
-
-    });
+    const wddCourses = courses.filter(
+        course => course.subject === "WDD"
+    );
 
     displayCourses(wddCourses);
 
