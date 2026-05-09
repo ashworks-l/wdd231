@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>WDD231 Home</title>
+
+    <meta name="description" content="Frontend Web Development I - WDD231" />
+    <meta name="author" content="Ashley" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JS -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-box">
+            <img src="images/visual-studio-code-logo-svgrepo-com.svg" alt="Site Logo">
+            <span>Ashley Dev</span>
+        </div>
+
+        <button id="menu"></button>
+
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">Chamber Project</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1>Home</h1>
+
+        <div class="top-sections">
+
+            <section class="card">
+                <h2>About Me</h2>
+
+                <p>
+                    My name is Ashley Lujan. I was born in Lima, Peru, and I currently live in Spain. I am studying Web and Computer Programming at 
+                    BYU-Idaho. I enjoy spending time with my family, dancing (I take dance classes from Monday to Thursday), 
+                    playing volleyball, and traveling around the world.
+                    Passionate frontend developer learning HTML, CSS and JavaScript.
+                    I enjoy creating responsive and accessible websites with modern
+                    user experiences.
+                </p>
+            </section>
+
+            <section class="card photo-card">
+                <h2>Student Photo</h2>
+
+                <img src="images/profile.webp" alt="Student Photo">
+            </section>
+
+        </div>
+
+        <section class="certificate">
+
+            <h2>Web Certificate Courses</h2>
+
+            <div class="buttons">
+                <button id="all">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+
+            <div id="courses"></div>
+
+            <p id="credits"></p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="socials">
+            <a href="https://github.com/ashworks-l/wdd231.git" target="_blank">GitHub</a>
+            <img src="images/github-svgrepo-com.svg" alt="GitHub">
+            <a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a>
+            <img src="images/linkedin-svgrepo-com.svg" alt="LinkedIn">
+            <a href="https://www.instagram.com/ashleydly07/?hl=es" target="_blank">Instagram</a>
+             <img src="images/instagram-1-svgrepo-com.svg" alt="LinkedIn">
+        </div>
+
+        <p>
+            © <span id="currentyear"></span> Ashley - Lima,Peru
+        </p>
+
+        <p id="lastModified"></p>
+
+    </footer>
+
+</body>
+</html>
