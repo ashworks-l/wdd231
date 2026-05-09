@@ -1,12 +1,17 @@
 @media screen and (min-width: 768px) {
 
+    /* MENU */
+
     #menu {
         display: none;
     }
 
+    /* NAVIGATION */
+
     .navigation {
         display: flex;
         flex-direction: row;
+        justify-content: center;
         background-color: #1f1f1f;
     }
 
@@ -15,10 +20,14 @@
         padding: 1rem 2rem;
     }
 
+    /* TOP GRID */
+
     .top-sections {
         grid-template-columns: 2fr 1fr;
         align-items: start;
     }
+
+    /* COURSES */
 
     #courses {
         grid-template-columns: repeat(3, 1fr);
