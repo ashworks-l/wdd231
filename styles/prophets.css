@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #e6e6e6;
+}
+
+header {
+    text-align: center;
+    background: #4a4aa0;
+    color: white;
+    padding: 1rem;
+}
+
+footer {
+    text-align: center;
+    background: #4a4aa0;
+    color: white;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* GRID */
+#cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* CARD */
+section {
+    background: #c9c9d9;
+    border: 2px solid #4a4aa0;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+section h2 {
+    color: #4a4aa0;
+    margin-bottom: 0.5rem;
+}
+
+section img {
+    margin-top: 0.5rem;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* TABLET */
+@media (min-width: 600px) {
+    #cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 900px) {
+    #cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
