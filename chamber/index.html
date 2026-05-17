@@ -5,15 +5,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pamplona Chamber of Commerce - Home</title>
+<title>Pamplona Chamber Directory</title>
 
-<meta name="description" content="Pamplona Chamber of Commerce supports local businesses, networking events, and economic growth in Navarra.">
-<meta name="author" content="Ashley Lujan">
+<meta name="description" content="Pamplona Chamber of Commerce supports local businesses, events, and networking opportunities while promoting economic growth, innovation, and community development in Navarra, Spain.">
 
-<meta property="og:title" content="Pamplona Chamber of Commerce">
-<meta property="og:description" content="Local businesses, events, and networking in Pamplona">
-<meta property="og:image" content="https://images.unsplash.com/photo-1515169067868-5387ec356754?q=80&w=1200&auto=format&fit=crop">
-<meta property="og:url" content="https://ashworks-l.github.io/wdd231/chamber/index.html">
+<meta name="author" content="Ashley Lujan Yañez">
+
+<meta property="og:title" content="Pamplona Chamber of Commerce Business Directory and Networking Hub">
+
+<meta property="og:description" content="Discover local businesses, networking opportunities, events, and community resources in Pamplona, Navarra. The chamber connects entrepreneurs and supports economic growth in the region.">
+
+<meta property="og:image" content="https://ashworks-l.github.io/wdd231/chamber/images/hero.jpg">
+
+<meta property="og:url" content="https://ashworks-l.github.io/wdd231/chamber/directory.html">
 
 <link rel="icon" href="images/logo.png">
 
@@ -25,8 +29,8 @@
 <link rel="stylesheet" href="styles/small.css">
 <link rel="stylesheet" href="styles/large.css">
 
+<script src="scripts/navigation.js" defer></script>
 <script src="scripts/directory.js" defer></script>
-
 </head>
 
 <body>
@@ -76,21 +80,21 @@
         <p>Friday 70°F</p>
     </div>
 
-</section>
 
 <section id="members" class="business-grid"></section>
 
 </main>
 
 <footer>
-
 <p>Ashley | WDD231</p>
-
 <p>© <span id="year"></span> Pamplona Chamber</p>
-
 <p id="lastModified"></p>
-
 </footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
+</script>
 
 </body>
 </html>

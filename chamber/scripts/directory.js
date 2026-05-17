@@ -37,6 +37,4 @@ document.querySelector("#list").addEventListener("click", () => {
 membersContainer.className = "list";
 });
 
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
 
