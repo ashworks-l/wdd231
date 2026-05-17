@@ -1,0 +1,176 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f3f3f3;
+    color:#222;
+}
+
+header{
+    background:#dcdcdc;
+    padding:1rem;
+}
+
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+
+.logo-section img{
+    width:45px;
+}
+
+.navigation{
+    list-style:none;
+    margin-top:1rem;
+}
+
+.navigation li{
+    margin-bottom:1rem;
+}
+
+.navigation a{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+}
+
+.hero{
+    position:relative;
+    margin:1rem;
+}
+
+.hero img{
+    width:100%;
+}
+
+.hero-button{
+    position:absolute;
+    bottom:20px;
+    right:20px;
+
+    background:#666;
+    color:white;
+
+    border:none;
+    padding:1rem;
+
+    border-radius:10px;
+}
+
+h2{
+    margin:1rem;
+    font-size:2rem;
+}
+
+.home-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1rem;
+
+    margin:1rem;
+}
+
+.card{
+    background:#ddd;
+}
+
+.card h3{
+    background:#333;
+    color:white;
+    padding:.7rem;
+}
+
+.card-content{
+    padding:2rem;
+    min-height:150px;
+}
+
+.weather-city{
+    padding:0 1rem;
+    margin-top:.5rem;
+    color:#444;
+}
+
+.weather-box{
+    display:flex;
+    gap:1rem;
+    padding:1rem;
+}
+
+.weather-box img{
+    width:70px;
+    height:70px;
+}
+
+.forecast{
+    padding:1rem;
+}
+
+.forecast p{
+    margin-bottom:1rem;
+}
+
+.business-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1rem;
+
+    margin:2rem 1rem;
+}
+
+.business-card{
+    background:#ddd;
+    padding:1rem;
+    border-radius:10px;
+
+    transition:.3s;
+}
+
+.business-card:hover{
+    transform:scale(1.02);
+}
+
+.business-card h3{
+    text-align:center;
+}
+
+.tagline{
+    text-align:center;
+    font-size:.8rem;
+    margin-bottom:.5rem;
+}
+
+.business-card hr{
+    margin:.8rem 0;
+    border:1px solid #bbb;
+}
+
+.business-info{
+    display:flex;
+    gap:1rem;
+    margin-top:1rem;
+}
+
+.business-info img{
+    width:90px;
+    height:90px;
+    object-fit:cover;
+}
+
+footer{
+    background:#dcdcdc;
+    padding:2rem 1rem;
+
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+}
+
+.socials{
+    display:flex;
+    gap:1rem;
+}
+
+.socials img{
+    width:45px;
+}

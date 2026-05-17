@@ -1,0 +1,49 @@
+@media screen and (min-width: 768px){
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:1rem 4rem;
+}
+
+.navigation{
+    display:flex;
+    gap:2rem;
+    margin-top:0;
+}
+
+.hero{
+    width:85%;
+    margin:auto;
+}
+
+h2{
+    width:85%;
+    margin:1rem auto;
+}
+
+.home-grid{
+    width:85%;
+    margin:auto;
+
+    grid-template-columns:2fr 1fr 1fr;
+}
+
+.business-grid{
+    width:85%;
+    margin:2rem auto;
+
+    grid-template-columns:1fr 1fr 1fr;
+}
+
+footer{
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:2rem 4rem;
+}
+
+}
