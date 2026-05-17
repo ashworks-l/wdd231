@@ -2,200 +2,93 @@
 <html lang="en">
 
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
+<title>Pamplona Chamber of Commerce - Home</title>
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pamplona Chamber of Commerce supports local businesses, networking events, and economic growth in Navarra.">
+<meta name="author" content="Ashley Lujan">
 
-    <title>
-        Pamplona Chamber Directory
-    </title>
+<meta property="og:title" content="Pamplona Chamber of Commerce">
+<meta property="og:description" content="Local businesses, events, and networking in Pamplona">
+<meta property="og:image" content="https://images.unsplash.com/photo-1515169067868-5387ec356754?q=80&w=1200&auto=format&fit=crop">
+<meta property="og:url" content="https://ashworks-l.github.io/wdd231/chamber/index.html">
 
-    <meta name="description"
-          content="Pamplona Chamber of Commerce supports local businesses, promotes economic growth, and connects entrepreneurs with opportunities, events, resources, and community development throughout Navarra.">
+<link rel="icon" href="images/logo.png">
 
-    <meta name="author" content="Ashley Lujan Yañez">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <meta property="og:title" content="Pamplona Chamber Directory">
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/small.css">
+<link rel="stylesheet" href="styles/large.css">
 
-    <meta property="og:description" content="Explore local businesses, events, networking opportunities, and community resources in Pamplona, Navarra.">
-
-    <meta property="og:image" content="https://images.unsplash.com/photo-1515169067868-5387ec356754?q=80&w=1200&auto=format&fit=crop">
-
-    <meta property="og:url" content="https://yourwebsite.com/chamber/index.html">
-
-    <link rel="icon" href="images/favicon.ico">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="styles/normalize.css">
-
-    <link rel="stylesheet"  href="styles/small.css">
-
-    <link rel="stylesheet" href="styles/large.css">
-
-    <script src="scripts/main.js" defer></script>
+<script src="scripts/directory.js" defer></script>
 
 </head>
 
 <body>
 
-<header>
+<header class="header">
 
-    <div class="logo-section">
+    <img src="images/logo.png" alt="logo" class="logo">
 
-        <img src="images/logo.png"
-             alt="Pamplona Chamber Logo">
-
-        <h1>
-            Pamplona Chamber of Commerce
-        </h1>
-
-    </div>
+    <h1>Pamplona Chamber of Commerce</h1>
 
     <nav>
-
-        <button id="menu">
-            ☰
-        </button>
-
-        <ul class="navigation">
-
-            <li><a href="index.html">Home</a></li>
-
-            <li><a href="directory.html">Directory</a></li>
-
-            <li><a href="#">Join</a></li>
-
-            <li><a href="#">Discover</a></li>
-
-        </ul>
-
+        <a href="index.html">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="#">Join</a>
+        <a href="#">Discover</a>
     </nav>
 
 </header>
 
 <main>
 
-    <h1>
-        Pamplona Chamber Directory
-    </h1>
+<section class="hero">
+    <img src="images/hero.jpg" alt="city hero">
 
-    <section class="hero">
+    <button class="hero-btn">
+        Join the Chamber
+    </button>
+</section>
 
-        <img src="images/hero.jpg" alt="Pamplona city image">
+<section class="home-grid">
 
-        <button class="hero-button">
-            Join the Chamber
-        </button>
+    <div class="card">
+        <h2>Events</h2>
+        <p>Business networking event this Friday at 7PM.</p>
+    </div>
 
-    </section>
+    <div class="card weather">
+        <h2>Weather</h2>
+        <img src="images/weather.png" alt="weather">
+        <p>75°F - Partly Cloudy</p>
+    </div>
 
-    <section class="home-grid">
+    <div class="card">
+        <h2>Forecast</h2>
+        <p>Today 75°F</p>
+        <p>Tomorrow 80°F</p>
+        <p>Friday 70°F</p>
+    </div>
 
-        <div class="card">
+</section>
 
-            <h2>
-                Events
-            </h2>
-
-            <p>
-                Annual Pamplona Business Conference this Friday at 7PM.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <h2>
-                Current Weather
-            </h2>
-
-            <div class="weather-box">
-
-                <img src="images/weather.png" alt="Weather icon">
-
-                <div>
-
-                    <p><strong>75°F</strong></p>
-
-                    <p>Partly Cloudy</p>
-
-                    <p>High: 85°</p>
-
-                    <p>Low: 52°</p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <h2>
-                Forecast
-            </h2>
-
-            <p>Today: 90°F</p>
-
-            <p>Wednesday: 89°F</p>
-
-            <p>Thursday: 68°F</p>
-
-        </div>
-
-    </section>
+<section id="members" class="business-grid"></section>
 
 </main>
 
 <footer>
 
-    <div>
+<p>Ashley | WDD231</p>
 
-        <h3>
-            Pamplona Chamber of Commerce
-        </h3>
+<p>© <span id="year"></span> Pamplona Chamber</p>
 
-        <p>
-            Pamplona, Navarra, Spain
-        </p>
-
-        <p>
-            info@pamplonacc.org
-        </p>
-
-        <p>
-            +34 948 123 456
-        </p>
-
-    </div>
-
-    <div>
-
-        <p>
-            Ashley | WDD231
-        </p>
-
-        <p>
-            © <span id="year"></span>
-            Pamplona Chamber
-        </p>
-
-        <p id="lastModified"></p>
-
-    </div>
-
-</footer>
-
-</body>
-</html>
+<p id="lastModified"></p>
 
 </footer>
 

@@ -1,31 +1,26 @@
 [
   {
     "name": "Navarra Tech Solutions",
-    "address": "Avenida Europa 12, Pamplona",
+    "address": "Pamplona, Spain",
     "phone": "600-111-111",
-    "website": "https://navarratech.com",
-    "image": "business1.jpg",
-    "membership": 3,
-    "description": "Software and technology services"
+    "website": "https://example.com",
+    "image": "technology.avif",
+    "membership": 3
   },
-
   {
     "name": "Elite Fitness Center",
-    "address": "Calle Mayor 8, Pamplona",
+    "address": "Pamplona, Spain",
     "phone": "600-222-222",
-    "website": "https://elitefitness.com",
-    "image": "business2.jpg",
-    "membership": 2,
-    "description": "Modern gym and wellness center"
+    "website": "https://example.com",
+    "image": "gym.avif",
+    "membership": 2
   },
-
   {
     "name": "Royal Cars Navarra",
-    "address": "Industrial Zone 44, Pamplona",
+    "address": "Pamplona, Spain",
     "phone": "600-333-333",
-    "website": "https://royalcars.com",
-    "image": "business3.jpg",
-    "membership": 3,
-    "description": "Luxury car dealership"
+    "website": "https://example.com",
+    "image": "car_dealer.avif",
+    "membership": 3
   }
 ]
