@@ -1,0 +1,99 @@
+body{
+    font-family:'Roboto', sans-serif;
+    background:#f4f4f4;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    background:#dcdcdc;
+    padding:1rem;
+}
+
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+
+.logo-section img{
+    width:50px;
+}
+
+.navigation{
+    list-style:none;
+    margin-top:1rem;
+}
+
+.navigation li{
+    margin-bottom:1rem;
+}
+
+.navigation a{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    margin:1rem;
+}
+
+.hero-button{
+    position:absolute;
+    bottom:20px;
+    right:20px;
+
+    padding:1rem;
+
+    border:none;
+
+    background:#444;
+    color:white;
+
+    border-radius:10px;
+}
+
+/* GRID */
+
+.home-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1rem;
+
+    margin:1rem;
+}
+
+/* CARDS */
+
+.card{
+    background:#ddd;
+    padding:1rem;
+    border-radius:10px;
+}
+
+.weather-box{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+
+.weather-box img{
+    width:70px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#dcdcdc;
+
+    padding:2rem 1rem;
+
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+}

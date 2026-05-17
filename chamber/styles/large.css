@@ -1,4 +1,4 @@
-@media screen and (min-width: 768px){
+@media screen and (min-width:768px){
 
 header{
     display:flex;
@@ -19,23 +19,11 @@ header{
     margin:auto;
 }
 
-h2{
-    width:85%;
-    margin:1rem auto;
-}
-
 .home-grid{
-    width:85%;
-    margin:auto;
-
-    grid-template-columns:2fr 1fr 1fr;
-}
-
-.business-grid{
     width:85%;
     margin:2rem auto;
 
-    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns:2fr 1fr 1fr;
 }
 
 footer{
