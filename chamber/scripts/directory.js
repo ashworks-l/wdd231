@@ -1,40 +1,50 @@
-const membersContainer = document.querySelector("#members");
+const url = "data/members.json";
+
+const cards = document.querySelector("#members");
 
 async function getMembers() {
-const res = await fetch("data/members.json");
-const data = await res.json();
-displayMembers(data);
+
+    const response = await fetch(url);
+
+    const data = await response.json();
+
+    displayMembers(data);
 }
 
-function displayMembers(members) {
+const displayMembers = (members) => {
 
-members.forEach(member => {
+    members.forEach((member) => {
 
-const card = document.createElement("div");
+        let card = document.createElement("section");
 
-card.innerHTML = `
-<h3>${member.name}</h3>
-<p>${member.address}</p>
-<p>${member.phone}</p>
-<a href="${member.website}" target="_blank">Website</a>
-<img src="images/${member.image}" alt="${member.name}">
-`;
+        card.classList.add("member-card");
 
-membersContainer.appendChild(card);
+        card.innerHTML = `
+            <img src="${member.image}" alt="${member.name}">
+            <h2>${member.name}</h2>
+            <p>${member.address}</p>
+            <p>${member.phone}</p>
+            <a href="${member.website}" target="_blank">Visit Website</a>
+        `;
 
-});
-
-}
+        cards.appendChild(card);
+    });
+};
 
 getMembers();
 
-/* view toggle */
+/* GRID BUTTON */
+
 document.querySelector("#grid").addEventListener("click", () => {
-membersContainer.className = "grid";
+    cards.classList.add("grid");
+    cards.classList.remove("list");
 });
 
+/* LIST BUTTON */
+
 document.querySelector("#list").addEventListener("click", () => {
-membersContainer.className = "list";
+    cards.classList.add("list");
+    cards.classList.remove("grid");
 });
 
 document.addEventListener("DOMContentLoaded", () => {

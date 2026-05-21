@@ -1,26 +1,64 @@
 [
-  {
-    "name": "Navarra Tech Solutions",
-    "address": "Pamplona, Spain",
-    "phone": "600-111-111",
-    "website": "https://example.com",
-    "image": "technology.avif",
-    "membership": 3
-  },
-  {
-    "name": "Elite Fitness Center",
-    "address": "Pamplona, Spain",
-    "phone": "600-222-222",
-    "website": "https://example.com",
-    "image": "gym.avif",
-    "membership": 2
-  },
-  {
-    "name": "Royal Cars Navarra",
-    "address": "Pamplona, Spain",
-    "phone": "600-333-333",
-    "website": "https://example.com",
-    "image": "car_dealer.avif",
-    "membership": 3
-  }
+{
+"name":"Navarra Tech Solutions",
+"address":"Pamplona, Navarra",
+"phone":"+34 600 111 111",
+"website":"https://example.com",
+"image":"images/technology.avif",
+"membership":3
+},
+
+{
+"name":"Pyrenees Adventure Tours",
+"address":"Pamplona, Navarra",
+"phone":"+34 600 222 222",
+"website":"https://example.com",
+"image":"images/tours.jpg",
+"membership":2
+},
+
+{
+"name":"Navarra Fitness Center",
+"address":"Pamplona, Navarra",
+"phone":"+34 600 333 333",
+"website":"https://example.com",
+"image":"images/gym.avif",
+"membership":1
+},
+
+{
+"name":"Iberia Marketing Group",
+"address":"Pamplona, Navarra",
+"phone":"+34 600 444 444",
+"website":"https://example.com",
+"image":"images/marketing.avif",
+"membership":3
+},
+
+{
+"name":"Pamplona Auto Services",
+"address":"Pamplona, Navarra",
+"phone":"+34 600 555 555",
+"website":"https://example.com",
+"image":"images/car_dealer.avif",
+"membership":2
+},
+
+{
+"name":"Navarra Real Estate",
+"address":"Pamplona, Navarra",
+"phone":"+34 600 666 666",
+"website":"https://example.com",
+"image":"images/real_estate.avif",
+"membership":1
+},
+
+{
+"name":"Eco Energy Navarra",
+"address":"Pamplona, Navarra",
+"phone":"+34 600 777 777",
+"website":"https://example.com",
+"image":"images/energy.avif",
+"membership":3
+}
 ]
