@@ -2,60 +2,65 @@ const apiKey = "87fd0b8c8abeedf925b7a098c9b9c464";
 const lat = 42.8125;
 const lon = -1.6458;
 
-const weatherURL =
-`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+// CLOCK
+function updateClock() {
+    const clock = document.getElementById("clock");
+    const now = new Date();
+    clock.textContent = now.toLocaleTimeString();
+}
+setInterval(updateClock, 1000);
 
+// YEAR + DATE
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
+
+// WEATHER
 async function getWeather() {
-const res = await fetch(weatherURL);
-const data = await res.json();
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
-document.querySelector("#temperature").textContent =
-`${Math.round(data.list[0].main.temp)}°C`;
+    const response = await fetch(url);
+    const data = await response.json();
 
-document.querySelector("#description").textContent =
-data.list[0].weather[0].description;
+    document.getElementById("temperature").textContent =
+        `${data.main.temp}°C`;
 
-document.querySelector("#weather-icon").src =
-`https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`;
+    document.getElementById("description").textContent =
+        data.weather[0].description;
+
+    document.getElementById("weather-icon").src =
+        `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 }
 
 getWeather();
 
-/* SPOTLIGHT */
+// SPOTLIGHT (JSON + RANDOM + GOLD/SILVER)
+async function loadSpotlights() {
+    const response = await fetch("data/members.json");
+    const members = await response.json();
 
-async function getSpotlights() {
-const res = await fetch("data/members.json");
-const data = await res.json();
+    const filtered = members.filter(m =>
+        m.membership === 2 || m.membership === 3
+    );
 
-const filtered = data.filter(m =>
-m.membership === 2 || m.membership === 3
-);
+    const random = filtered.sort(() => 0.5 - Math.random()).slice(0, 3);
 
-const random = filtered.sort(() => 0.5 - Math.random()).slice(0, 3);
+    const container = document.getElementById("spotlight-container");
+    container.innerHTML = "";
 
-const container = document.querySelector("#spotlight-container");
+    random.forEach(m => {
+        const card = document.createElement("div");
+        card.classList.add("member-card");
 
-random.forEach(m => {
-container.innerHTML += `
-<div class="member-card">
-<h3>${m.name}</h3>
-<p>${m.address}</p>
-<p>${m.phone}</p>
-<a href="${m.website}" target="_blank">Visit</a>
-</div>`;
-});
+        card.innerHTML = `
+            <img src="${m.image}" alt="${m.name}">
+            <h3>${m.name}</h3>
+            <p>${m.phone}</p>
+            <p>${m.address}</p>
+            <a href="${m.website}" target="_blank">Visit</a>
+        `;
+
+        container.appendChild(card);
+    });
 }
 
-getSpotlights();
-
-/* FOOTER */
-
-document.querySelector("#year").textContent = new Date().getFullYear();
-document.querySelector("#lastModified").textContent = document.lastModified;
-
-/* CLOCK */
-
-setInterval(() => {
-document.querySelector("#clock").textContent =
-new Date().toLocaleTimeString();
-}, 1000);
+loadSpotlights();
