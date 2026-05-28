@@ -42,23 +42,5 @@
 "website":"https://example.com",
 "image":"images/car_dealer.avif",
 "membership":2
-},
-
-{
-"name":"Navarra Real Estate",
-"address":"Pamplona, Navarra",
-"phone":"+34 600 666 666",
-"website":"https://example.com",
-"image":"images/real_estate.avif",
-"membership":1
-},
-
-{
-"name":"Eco Energy Navarra",
-"address":"Pamplona, Navarra",
-"phone":"+34 600 777 777",
-"website":"https://example.com",
-"image":"images/energy.avif",
-"membership":3
 }
 ]

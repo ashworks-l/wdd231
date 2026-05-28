@@ -1,62 +1,119 @@
 const apiKey = "87fd0b8c8abeedf925b7a098c9b9c464";
+
 const lat = 42.8125;
 const lon = -1.6458;
 
-// CLOCK
-function updateClock() {
-    const clock = document.getElementById("clock");
-    const now = new Date();
-    clock.textContent = now.toLocaleTimeString();
-}
-setInterval(updateClock, 1000);
+/* YEAR */
 
-// YEAR + DATE
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
+document.getElementById("year").textContent =
+new Date().getFullYear();
 
-// WEATHER
+document.getElementById("lastModified").textContent =
+document.lastModified;
+
+/* HAMBURGER */
+
+const menuButton =
+document.getElementById("menu-button");
+
+const navigation =
+document.getElementById("navigation");
+
+menuButton.addEventListener("click", () => {
+    navigation.classList.toggle("open");
+});
+
+/* WEATHER */
+
 async function getWeather() {
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+
+    const url =
+`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
     const response = await fetch(url);
+
     const data = await response.json();
 
+    const current = data.list[0];
+
     document.getElementById("temperature").textContent =
-        `${data.main.temp}°C`;
+`${Math.round(current.main.temp)}°C`;
 
     document.getElementById("description").textContent =
-        data.weather[0].description;
+current.weather[0].description;
 
     document.getElementById("weather-icon").src =
-        `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+`https://openweathermap.org/img/wn/${current.weather[0].icon}.png`;
+
+    const forecast = document.getElementById("forecast");
+
+    forecast.innerHTML = "";
+
+    const filtered = data.list.filter(item =>
+        item.dt_txt.includes("12:00:00")
+    );
+
+    filtered.slice(0, 3).forEach(day => {
+
+        const date = new Date(day.dt_txt);
+
+        const p = document.createElement("p");
+
+        p.textContent =
+`${date.toLocaleDateString("en-US", { weekday: "short" })}: ${Math.round(day.main.temp)}°C`;
+
+        forecast.appendChild(p);
+    });
 }
 
 getWeather();
 
-// SPOTLIGHT (JSON + RANDOM + GOLD/SILVER)
-async function loadSpotlights() {
-    const response = await fetch("data/members.json");
-    const members = await response.json();
+/* SPOTLIGHTS */
 
-    const filtered = members.filter(m =>
-        m.membership === 2 || m.membership === 3
+async function loadSpotlights() {
+
+    const response =
+    await fetch("data/members.json");
+
+    const members =
+    await response.json();
+
+    const filtered =
+    members.filter(member =>
+        member.membership === 2 ||
+        member.membership === 3
     );
 
-    const random = filtered.sort(() => 0.5 - Math.random()).slice(0, 3);
+    const random =
+    filtered.sort(() => 0.5 - Math.random())
+    .slice(0, 3);
 
-    const container = document.getElementById("spotlight-container");
+    const container =
+    document.getElementById("spotlight-container");
+
     container.innerHTML = "";
 
-    random.forEach(m => {
-        const card = document.createElement("div");
+    random.forEach(member => {
+
+        const card =
+        document.createElement("section");
+
         card.classList.add("member-card");
 
+        const level =
+        member.membership === 3
+        ? "Gold Member"
+        : "Silver Member";
+
         card.innerHTML = `
-            <img src="${m.image}" alt="${m.name}">
-            <h3>${m.name}</h3>
-            <p>${m.phone}</p>
-            <p>${m.address}</p>
-            <a href="${m.website}" target="_blank">Visit</a>
+        <img src="${member.image}" alt="${member.name}">
+        <h3>${member.name}</h3>
+        <p>${level}</p>
+        <p>${member.phone}</p>
+        <p>${member.address}</p>
+        <a href="${member.website}" target="_blank">
+        Visit Website
+        </a>
         `;
 
         container.appendChild(card);

@@ -12,43 +12,44 @@ content="Pamplona Chamber connects local businesses, promotes events, networking
 
 <meta name="author" content="Ashley Lujan Yañez">
 
-<meta property="og:title"
-content="Pamplona Chamber Home Page">
-
-<meta property="og:description"
-content="Discover businesses, events, weather updates and networking opportunities in Pamplona Chamber of Commerce.">
-
-<meta property="og:image"
-content="https://ashworks-l.github.io/wdd231/chamber/images/hero.jpg">
-
-<meta property="og:url"
-content="https://ashworks-l.github.io/wdd231/chamber/index.html">
-
 <link rel="icon" href="images/logo.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles/normalize.css">
 <link rel="stylesheet" href="styles/small.css">
-<link rel="stylesheet" href="styles/large.css">
 
 <script src="scripts/home.js" defer></script>
+
 </head>
 
 <body>
 
 <header>
-<img src="images/logo.png" alt="logo" class="logo">
+
+<img src="images/logo.png" alt="Pamplona Chamber logo" class="logo">
+
 <h2>Pamplona Chamber</h2>
 
-<nav>
+<button id="menu-button" aria-label="Open navigation menu">
+☰
+</button>
+
+<nav id="navigation">
+
 <a class="active" href="index.html">Home</a>
+
 <a href="directory.html">Directory</a>
-<a href="#">Join</a>
+
+<a href="join.html">Join</a>
+
 <a href="#">Discover</a>
+
 </nav>
+
 </header>
 
 <main>
@@ -56,45 +57,87 @@ content="https://ashworks-l.github.io/wdd231/chamber/index.html">
 <h1>Support Local Business in Pamplona</h1>
 
 <section class="hero">
-<img src="images/hero.jpg" alt="Pamplona city">
-<a class="hero-btn" href="#">Join the Chamber</a>
+
+<img
+src="images/pamplona.jpg"
+alt="Pamplona city center"
+width="1200"
+height="600"
+loading="lazy">
+
+<a class="hero-btn" href="join.html">
+Join the Chamber
+</a>
+
 </section>
 
 <section class="home-grid">
 
 <div class="card">
+
 <h2>Current Events</h2>
+
 <p>Business Meetup Friday</p>
+
 <p>Startup Workshop Saturday</p>
+
 <p>Networking Night Monday</p>
+
 </div>
 
 <div class="card weather-card">
+
 <h2>Weather</h2>
-<img src="images/weather.png" alt="weather">
+
+<img
+id="weather-icon"
+src="images/weather.png"
+alt="Weather icon"
+width="50"
+height="50">
+
 <p id="temperature"></p>
+
 <p id="description"></p>
+
+<div id="forecast"></div>
+
 </div>
 
 <div class="card">
+
 <h2>Why Join?</h2>
-<p>Grow your business, network and visibility in Navarra.</p>
+
+<p>
+Grow your business, connect with local leaders,
+and increase visibility in Navarra.
+</p>
+
 </div>
 
 </section>
 
 <section class="spotlights">
+
 <h2>Business Spotlights</h2>
+
 <div id="spotlight-container"></div>
+
 </section>
 
 </main>
 
 <footer>
+
 <p>Ashley | WDD231</p>
-<p>© <span id="year"></span> Pamplona Chamber</p>
+
+<p>
+© <span id="year"></span>
+Pamplona Chamber
+</p>
+
 <p id="lastModified"></p>
-<p id="clock"></p>
+
 </footer>
 
 </body>
