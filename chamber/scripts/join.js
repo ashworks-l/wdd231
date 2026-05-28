@@ -1,33 +1,54 @@
-const timestamp =
-document.getElementById("timestamp");
+/* ================= TIMESTAMP ================= */
 
-timestamp.value =
-new Date().toLocaleString();
+const timestamp = document.getElementById("timestamp");
 
-/* YEAR */
+if (timestamp) {
+    timestamp.value = new Date().toISOString();
+}
 
-const year =
-document.getElementById("year");
+/* ================= YEAR ================= */
 
-year.textContent =
-new Date().getFullYear();
+const year = document.getElementById("year");
 
-/* LAST MODIFIED */
+if (year) {
+    year.textContent = new Date().getFullYear();
+}
 
-const modified =
-document.getElementById("lastModified");
+/* ================= LAST MODIFIED ================= */
 
-modified.textContent =
-document.lastModified;
+const modified = document.getElementById("lastModified");
 
-/* HAMBURGER */
+if (modified) {
+    modified.textContent = document.lastModified;
+}
 
-const menuButton =
-document.getElementById("menu-button");
+/* ================= HAMBURGER MENU ================= */
 
-const navigation =
-document.getElementById("navigation");
+const menuButton = document.getElementById("menu-button");
+const navigation = document.getElementById("navigation");
 
-menuButton.addEventListener("click", () => {
-    navigation.classList.toggle("open");
-})
+if (menuButton && navigation) {
+    menuButton.addEventListener("click", () => {
+        navigation.classList.toggle("open");
+    });
+}
+
+/* ================= MODALS (NO ONCLICK) ================= */
+
+const openButtons = document.querySelectorAll(".open-modal");
+
+openButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const modal = document.getElementById(button.dataset.modal);
+        if (modal) modal.showModal();
+    });
+});
+
+const closeButtons = document.querySelectorAll(".close-modal");
+
+closeButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const modal = document.getElementById(button.dataset.close);
+        if (modal) modal.close();
+    });
+});

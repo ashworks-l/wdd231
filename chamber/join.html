@@ -15,10 +15,10 @@ content="Apply to join the Pamplona Chamber of Commerce and connect with local b
 content="Ashley Lujan Yañez">
 
 <meta property="og:title"
-content="Join Pamplona Chamber of Commerce Membership Program">
+content="Join Pamplona Chamber Membership Program">
 
 <meta property="og:description"
-content="Become a member of the Pamplona Chamber of Commerce to access networking events, business promotion, training, and local opportunities in Navarra.">
+content="Become a member of the Pamplona Chamber of Commerce and access networking, business promotion, training, and local opportunities in Navarra.">
 
 <meta property="og:image"
 content="https://ashworks-l.github.io/wdd231/chamber/images/hero.jpg">
@@ -29,25 +29,15 @@ content="https://ashworks-l.github.io/wdd231/chamber/join.html">
 <link rel="icon" href="images/logo.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-rel="stylesheet">
-
-<link rel="stylesheet"
-href="styles/normalize.css">
-
-<link rel="stylesheet"
-href="styles/small.css">
-
-<link rel="stylesheet"
-href="styles/large.css">
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/small.css">
+<link rel="stylesheet" href="styles/large.css">
 
 <script src="scripts/navigation.js" defer></script>
-
 <script src="scripts/join.js" defer></script>
 
 </head>
@@ -56,26 +46,17 @@ href="styles/large.css">
 
 <header>
 
-<img src="images/logo.png"
-alt="Pamplona Chamber logo"
-class="logo">
+<img src="images/logo.png" alt="Pamplona Chamber logo" class="logo">
 
 <h2>Pamplona Chamber</h2>
 
-<button id="menu-button"
-aria-label="Open navigation">
-☰
-</button>
+<button id="menu-button" aria-label="Open navigation">☰</button>
 
 <nav id="navigation">
 
 <a href="index.html">Home</a>
-
 <a href="directory.html">Directory</a>
-
-<a class="active"
-href="join.html">Join</a>
-
+<a class="active" href="join.html">Join</a>
 <a href="#">Discover</a>
 
 </nav>
@@ -88,219 +69,133 @@ href="join.html">Join</a>
 
 <div class="join-layout">
 
-<form method="get"
-action="thankyou.html">
+<form method="get" action="thankyou.html">
 
 <label>
 First Name
-<input
-type="text"
-name="firstname"
-title="Enter your first name"
-autocomplete="given-name"
-required>
+<input type="text" name="firstname" autocomplete="given-name" required>
 </label>
 
 <label>
 Last Name
-<input
-type="text"
-name="lastname"
-title="Enter your last name"
-autocomplete="family-name"
-required>
+<input type="text" name="lastname" autocomplete="family-name" required>
 </label>
 
 <label>
 Organization Title
-<input
-type="text"
-name="orgtitle"
-title="Organization title"
+<input type="text" name="orgtitle"
 autocomplete="organization-title"
-pattern="[A-Za-z\\-\\s]{7,}"
->
+pattern="[A-Za-z\\-\\s]{7,}">
 </label>
 
 <label>
 Email
-<input
-type="email"
-name="email"
-title="Enter email address"
-autocomplete="email"
+<input type="email" name="email"
 placeholder="example@email.com"
-required>
+autocomplete="email" required>
 </label>
 
 <label>
 Mobile Phone
-<input
-type="tel"
-name="phone"
-title="Enter phone number"
-autocomplete="tel"
-required>
+<input type="tel" name="phone"
+autocomplete="tel" required>
 </label>
 
 <label>
 Organization Name
-<input
-type="text"
-name="organization"
-title="Organization name"
-autocomplete="organization"
-required>
+<input type="text" name="organization"
+autocomplete="organization" required>
 </label>
 
 <label>
 Membership Level
 
-<select
-name="membership"
-title="Select membership level">
-
-<option value="np">
-NP Membership
-</option>
-
-<option value="bronze">
-Bronze Membership
-</option>
-
-<option value="silver">
-Silver Membership
-</option>
-
-<option value="gold">
-Gold Membership
-</option>
-
+<select name="membership">
+<option value="np">NP Membership</option>
+<option value="bronze">Bronze Membership</option>
+<option value="silver">Silver Membership</option>
+<option value="gold">Gold Membership</option>
 </select>
 
 </label>
 
 <label>
 Business Description
-
-<textarea
-name="description"
-title="Business description">
-</textarea>
-
+<textarea name="description"></textarea>
 </label>
 
-<input
-type="hidden"
-id="timestamp"
-name="timestamp">
+<input type="hidden" id="timestamp" name="timestamp">
 
-<input
-type="submit"
-value="Submit Application"
-class="submit-btn">
+<input type="submit" value="Submit Application" class="submit-btn">
 
 </form>
+
+<!-- MEMBERSHIP CARDS -->
 
 <section class="membership-cards">
 
 <div class="membership-card">
-
 <h2>NP Membership</h2>
-
 <p>No fee for nonprofits.</p>
-
-<button onclick="document.getElementById('np-modal').showModal()">
-Learn More
-</button>
-
+<button class="open-modal" data-modal="np-modal">Learn More</button>
 </div>
 
 <div class="membership-card">
-
 <h2>Bronze Membership</h2>
-
 <p>Basic business exposure.</p>
-
-<button onclick="document.getElementById('bronze-modal').showModal()">
-Learn More
-</button>
-
+<button class="open-modal" data-modal="bronze-modal">Learn More</button>
 </div>
 
 <div class="membership-card">
-
 <h2>Silver Membership</h2>
-
 <p>Advertising opportunities.</p>
-
-<button onclick="document.getElementById('silver-modal').showModal()">
-Learn More
-</button>
-
+<button class="open-modal" data-modal="silver-modal">Learn More</button>
 </div>
 
 <div class="membership-card">
-
 <h2>Gold Membership</h2>
-
 <p>Premium visibility and events.</p>
-
-<button onclick="document.getElementById('gold-modal').showModal()">
-Learn More
-</button>
-
+<button class="open-modal" data-modal="gold-modal">Learn More</button>
 </div>
 
 </section>
 
 </div>
 
+<!-- MODALS -->
+
 <dialog id="np-modal">
 <h3>NP Benefits</h3>
-<p>No fee and event access.</p>
-<button onclick="document.getElementById('np-modal').close()">
-Close
-</button>
+<p>No fees, community access.</p>
+<button class="close-modal" data-close="np-modal">Close</button>
 </dialog>
 
 <dialog id="bronze-modal">
 <h3>Bronze Benefits</h3>
-<p>Basic listing and networking.</p>
-<button onclick="document.getElementById('bronze-modal').close()">
-Close
-</button>
+<p>Basic listing and visibility.</p>
+<button class="close-modal" data-close="bronze-modal">Close</button>
 </dialog>
 
 <dialog id="silver-modal">
 <h3>Silver Benefits</h3>
-<p>Advertising and event discounts.</p>
-<button onclick="document.getElementById('silver-modal').close()">
-Close
-</button>
+<p>Advertising and discounts.</p>
+<button class="close-modal" data-close="silver-modal">Close</button>
 </dialog>
 
 <dialog id="gold-modal">
 <h3>Gold Benefits</h3>
 <p>Homepage spotlight and premium events.</p>
-<button onclick="document.getElementById('gold-modal').close()">
-Close
-</button>
+<button class="close-modal" data-close="gold-modal">Close</button>
 </dialog>
 
 </main>
 
 <footer>
 
-<p>
-© <span id="year"></span>
-Pamplona Chamber
-</p>
-
+<p>© <span id="year"></span> Pamplona Chamber</p>
 <p id="lastModified"></p>
 
 </footer>
 
 </body>
 </html>
-
