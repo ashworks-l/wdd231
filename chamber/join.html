@@ -9,20 +9,15 @@
 <title>Join Pamplona Chamber</title>
 
 <meta name="description"
-content="Apply to join the Pamplona Chamber of Commerce and connect with local businesses, networking events, and professional opportunities in Navarra, Spain.">
+content="Join the Pamplona Chamber of Commerce and access networking, business promotion, and professional opportunities in Navarra, Spain.">
 
-<meta name="author"
-content="Ashley Lujan Yañez">
+<meta name="author" content="Ashley Lujan Yañez">
 
-<meta property="og:title"
-content="Join Pamplona Chamber Membership Program">
-
+<meta property="og:title" content="Join Pamplona Chamber Membership Program">
 <meta property="og:description"
-content="Become a member of the Pamplona Chamber of Commerce and access networking, business promotion, training, and local opportunities in Navarra.">
-
+content="Become a member of the Pamplona Chamber of Commerce and enjoy networking events, training, and business visibility in Navarra.">
 <meta property="og:image"
 content="https://ashworks-l.github.io/wdd231/chamber/images/hero.jpg">
-
 <meta property="og:url"
 content="https://ashworks-l.github.io/wdd231/chamber/join.html">
 
@@ -30,7 +25,6 @@ content="https://ashworks-l.github.io/wdd231/chamber/join.html">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles/normalize.css">
@@ -50,15 +44,13 @@ content="https://ashworks-l.github.io/wdd231/chamber/join.html">
 
 <h2>Pamplona Chamber</h2>
 
-<button id="menu-button" aria-label="Open navigation">☰</button>
+<button id="menu-button" aria-label="Open menu">☰</button>
 
 <nav id="navigation">
-
 <a href="index.html">Home</a>
 <a href="directory.html">Directory</a>
 <a class="active" href="join.html">Join</a>
 <a href="#">Discover</a>
-
 </nav>
 
 </header>
@@ -69,68 +61,116 @@ content="https://ashworks-l.github.io/wdd231/chamber/join.html">
 
 <div class="join-layout">
 
+<!-- ================= FORM (ONLY ONE FORM AS REQUIRED) ================= -->
 <form method="get" action="thankyou.html">
 
-<label>
+<!-- FIRST NAME -->
+<label for="firstname">
 First Name
-<input type="text" name="firstname" autocomplete="given-name" required>
+<input
+type="text"
+id="firstname"
+name="firstname"
+title="Enter your first name"
+autocomplete="given-name"
+required>
 </label>
 
-<label>
+<!-- LAST NAME -->
+<label for="lastname">
 Last Name
-<input type="text" name="lastname" autocomplete="family-name" required>
+<input
+type="text"
+id="lastname"
+name="lastname"
+title="Enter your last name"
+autocomplete="family-name"
+required>
 </label>
 
-<label>
+<!-- ORGANIZATION TITLE -->
+<label for="orgtitle">
 Organization Title
-<input type="text" name="orgtitle"
+<input
+type="text"
+id="orgtitle"
+name="orgtitle"
+title="Organization title"
 autocomplete="organization-title"
 pattern="[A-Za-z\\-\\s]{7,}">
 </label>
 
-<label>
-Email
-<input type="email" name="email"
+<!-- EMAIL -->
+<label for="email">
+Email Address
+<input
+type="email"
+id="email"
+name="email"
+title="Enter your email address"
+autocomplete="email"
 placeholder="example@email.com"
-autocomplete="email" required>
+required>
 </label>
 
-<label>
+<!-- PHONE -->
+<label for="phone">
 Mobile Phone
-<input type="tel" name="phone"
-autocomplete="tel" required>
+<input
+type="tel"
+id="phone"
+name="phone"
+title="Enter your mobile phone number"
+autocomplete="tel"
+required>
 </label>
 
-<label>
+<!-- ORGANIZATION -->
+<label for="organization">
 Organization Name
-<input type="text" name="organization"
-autocomplete="organization" required>
+<input
+type="text"
+id="organization"
+name="organization"
+title="Organization name"
+autocomplete="organization"
+required>
 </label>
 
-<label>
+<!-- MEMBERSHIP -->
+<label for="membership">
 Membership Level
-
-<select name="membership">
+<select
+id="membership"
+name="membership"
+title="Select membership level">
 <option value="np">NP Membership</option>
 <option value="bronze">Bronze Membership</option>
 <option value="silver">Silver Membership</option>
 <option value="gold">Gold Membership</option>
 </select>
-
 </label>
 
-<label>
-Business Description
-<textarea name="description"></textarea>
+<!-- DESCRIPTION -->
+<label for="description">
+Organization Description
+<textarea
+id="description"
+name="description"
+title="Describe your organization"></textarea>
 </label>
 
+<!-- TIMESTAMP -->
 <input type="hidden" id="timestamp" name="timestamp">
 
-<input type="submit" value="Submit Application" class="submit-btn">
+<!-- SUBMIT BUTTON -->
+<button type="submit" class="submit-btn">
+Submit Application
+</button>
 
 </form>
 
-<!-- MEMBERSHIP CARDS -->
+<!-- ================= MEMBERSHIP CARDS ================= -->
 
 <section class="membership-cards">
 
@@ -142,19 +182,19 @@ Business Description
 
 <div class="membership-card">
 <h2>Bronze Membership</h2>
-<p>Basic business exposure.</p>
+<p>Basic exposure and listing.</p>
 <button class="open-modal" data-modal="bronze-modal">Learn More</button>
 </div>
 
 <div class="membership-card">
 <h2>Silver Membership</h2>
-<p>Advertising opportunities.</p>
+<p>Advertising and promotions.</p>
 <button class="open-modal" data-modal="silver-modal">Learn More</button>
 </div>
 
 <div class="membership-card">
 <h2>Gold Membership</h2>
-<p>Premium visibility and events.</p>
+<p>Premium spotlight and events.</p>
 <button class="open-modal" data-modal="gold-modal">Learn More</button>
 </div>
 
@@ -162,7 +202,7 @@ Business Description
 
 </div>
 
-<!-- MODALS -->
+<!-- ================= MODALS ================= -->
 
 <dialog id="np-modal">
 <h3>NP Benefits</h3>
