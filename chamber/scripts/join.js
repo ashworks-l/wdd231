@@ -1,4 +1,3 @@
-```javascript
 const timestamp =
 document.getElementById("timestamp");
 
@@ -31,5 +30,4 @@ document.getElementById("navigation");
 
 menuButton.addEventListener("click", () => {
     navigation.classList.toggle("open");
-});
-```
+})
