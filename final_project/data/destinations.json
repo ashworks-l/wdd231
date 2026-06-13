@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "name": "Paris",
+    "country": "France",
+    "continent": "Europe",
+    "temperature": "18°C",
+    "description": "Known for the Eiffel Tower, museums, and romantic atmosphere.",
+    "image": "images/paris.webp"
+  },
+  {
+    "id": 2,
+    "name": "Tokyo",
+    "country": "Japan",
+    "continent": "Asia",
+    "temperature": "22°C",
+    "description": "A vibrant city that blends tradition with modern technology.",
+    "image": "images/tokyo.webp"
+  },
+  {
+    "id": 3,
+    "name": "New York",
+    "country": "United States",
+    "continent": "North America",
+    "temperature": "20°C",
+    "description": "Home to Times Square, Central Park, and iconic skyscrapers.",
+    "image": "images/NewYork.webp"
+  },
+  {
+    "id": 4,
+    "name": "Rome",
+    "country": "Italy",
+    "continent": "Europe",
+    "temperature": "24°C",
+    "description": "Famous for the Colosseum and rich ancient history.",
+    "image": "images/rome.webp"
+  },
+  {
+    "id": 5,
+    "name": "London",
+    "country": "United Kingdom",
+    "continent": "Europe",
+    "temperature": "16°C",
+    "description": "A city full of history, culture, and famous landmarks.",
+    "image": "images/london.webp"
+  },
+  {
+    "id": 6,
+    "name": "Dubai",
+    "country": "United Arab Emirates",
+    "continent": "Asia",
+    "temperature": "35°C",
+    "description": "Known for luxury shopping, skyscrapers, and desert adventures.",
+    "image": "images/dubai.webp"
+  },
+  {
+    "id": 7,
+    "name": "Barcelona",
+    "country": "Spain",
+    "continent": "Europe",
+    "temperature": "27°C",
+    "description": "Famous for Gaudí architecture and Mediterranean beaches.",
+    "image": "images/barcelona.webp"
+  },
+  {
+    "id": 8,
+    "name": "Sydney",
+    "country": "Australia",
+    "continent": "Oceania",
+    "temperature": "25°C",
+    "description": "Home to the Sydney Opera House and beautiful harbors.",
+    "image": "images/sydney.webp"
+  },
+  {
+    "id": 9,
+    "name": "Bali",
+    "country": "Indonesia",
+    "continent": "Asia",
+    "temperature": "28°C",
+    "description": "A tropical paradise known for beaches and temples.",
+    "image": "images/bali.webp"
+  },
+  {
+    "id": 10,
+    "name": "Cairo",
+    "country": "Egypt",
+    "continent": "Africa",
+    "temperature": "30°C",
+    "description": "Gateway to the Pyramids of Giza and ancient Egyptian history.",
+    "image": "images/cairo.webp"
+  },
+  {
+    "id": 11,
+    "name": "Bangkok",
+    "country": "Thailand",
+    "continent": "Asia",
+    "temperature": "32°C",
+    "description": "Known for vibrant street markets and delicious cuisine.",
+    "image": "images/bangkok.webp"
+  },
+  {
+    "id": 12,
+    "name": "Seoul",
+    "country": "South Korea",
+    "continent": "Asia",
+    "temperature": "23°C",
+    "description": "A modern city with rich culture and K-pop influence.",
+    "image": "images/seoul.webp"
+  },
+  {
+    "id": 13,
+    "name": "Rio de Janeiro",
+    "country": "Brazil",
+    "continent": "South America",
+    "temperature": "29°C",
+    "description": "Famous for Carnival, beaches, and Christ the Redeemer.",
+    "image": "images/rio.webp"
+  },
+  {
+    "id": 14,
+    "name": "Cape Town",
+    "country": "South Africa",
+    "continent": "Africa",
+    "temperature": "22°C",
+    "description": "Known for Table Mountain and spectacular coastal scenery.",
+    "image": "images/cape.webp"
+  },
+  {
+    "id": 15,
+    "name": "Reykjavik",
+    "country": "Iceland",
+    "continent": "Europe",
+    "temperature": "10°C",
+    "description": "A popular destination for viewing the Northern Lights.",
+    "image": "images/reykjavik.webp"
+  }
+]
