@@ -1,78 +1,89 @@
-const container = document.querySelector("#cardsContainer");
-const modal = document.querySelector("#details");
+const grid = document.querySelector("#grid");
+const modal = document.querySelector("#modal");
+const modalContent = document.querySelector("#modalContent");
+const search = document.querySelector("#search");
 
 let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
-function saveFavorites() {
-    localStorage.setItem("favorites", JSON.stringify(favorites));
+async function loadDestinations() {
+  try {
+    const res = await fetch("./data/destinations.json");
+    const data = await res.json();
+
+    render(data);
+
+    search.addEventListener("input", e => {
+      const filtered = data.filter(d =>
+        d.name.toLowerCase().includes(e.target.value.toLowerCase())
+      );
+      render(filtered);
+    });
+
+  } catch (error) {
+    console.error("Error loading data", error);
+  }
 }
 
-function toggleFavorite(id, button) {
-    if (favorites.includes(id)) {
-        favorites = favorites.filter(item => item !== id);
-        button.textContent = "⭐ Add Favorite";
-    } else {
-        favorites.push(id);
-        button.textContent = "⭐ Saved";
-    }
+function render(items) {
+  grid.innerHTML = "";
 
-    saveFavorites();
+  items.forEach(dest => {
+
+    const isFav = favorites.includes(dest.id);
+
+    grid.innerHTML += `
+      <div class="card">
+        <img src="${dest.image}" loading="lazy">
+
+        <h3>${dest.name}</h3>
+        <p>${dest.country}</p>
+        <p>⭐ ${dest.rating}</p>
+
+        <button onclick="openModal(${dest.id})">Details</button>
+
+        <button onclick="toggleFav(${dest.id})">
+          ${isFav ? "💖 Saved" : "🤍 Save"}
+        </button>
+      </div>
+    `;
+  });
 }
 
-function isFavorite(id) {
-    return favorites.includes(id);
+function toggleFav(id) {
+
+  if (favorites.includes(id)) {
+    favorites = favorites.filter(f => f !== id);
+  } else {
+    favorites.push(id);
+  }
+
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+
+  loadDestinations();
 }
 
-function displayDestinations(data) {
-    container.innerHTML = "";
+function openModal(id) {
+  fetch("./data/destinations.json")
+    .then(res => res.json())
+    .then(data => {
+      const item = data.find(d => d.id === id);
 
-    data.forEach(item => {
-        const card = document.createElement("article");
-        card.classList.add("card");
+      modalContent.innerHTML = `
+        <h2>${item.name}</h2>
+        <p>${item.country}</p>
+        <p>Continent: ${item.continent}</p>
+        <p>Price: $${item.price}</p>
+        <p>Rating: ${item.rating}</p>
+      `;
 
-        const favText = isFavorite(item.id) ? "⭐ Saved" : "⭐ Add Favorite";
-
-        card.innerHTML = `
-            <img src="${item.image}" alt="${item.name}" loading="lazy">
-            <h3>${item.name}</h3>
-            <p>${item.country}</p>
-            <p>${item.description}</p>
-
-            <button class="details-btn">Details</button>
-            <button class="favorite-btn">${favText}</button>
-        `;
-
-        /* DETAILS MODAL */
-        card.querySelector(".details-btn").addEventListener("click", () => {
-            modal.innerHTML = `
-                <h2>${item.name}</h2>
-                <p>${item.details}</p>
-                <button onclick="details.close()">Close</button>
-            `;
-            modal.showModal();
-        });
-
-        /* FAVORITES */
-        const favBtn = card.querySelector(".favorite-btn");
-
-        favBtn.addEventListener("click", () => {
-            toggleFavorite(item.id, favBtn);
-        });
-
-        container.appendChild(card);
+      modal.style.display = "flex";
     });
 }
 
-async function loadDestinations() {
-    try {
-        const res = await fetch("scripts/destinations.json");
-        const data = await res.json();
-
-        displayDestinations(data);
-
-    } catch (error) {
-        console.error("Error loading destinations:", error);
-    }
-}
+window.onclick = e => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+};
 
 loadDestinations();

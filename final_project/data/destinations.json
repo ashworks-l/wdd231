@@ -4,134 +4,134 @@
     "name": "Paris",
     "country": "France",
     "continent": "Europe",
-    "temperature": "18°C",
-    "description": "Known for the Eiffel Tower, museums, and romantic atmosphere.",
-    "image": "images/paris.webp"
+    "rating": 4.8,
+    "price": 1200,
+    "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34"
   },
   {
     "id": 2,
     "name": "Tokyo",
     "country": "Japan",
     "continent": "Asia",
-    "temperature": "22°C",
-    "description": "A vibrant city that blends tradition with modern technology.",
-    "image": "images/tokyo.webp"
+    "rating": 4.9,
+    "price": 1800,
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf"
   },
   {
     "id": 3,
     "name": "New York",
-    "country": "United States",
+    "country": "USA",
     "continent": "North America",
-    "temperature": "20°C",
-    "description": "Home to Times Square, Central Park, and iconic skyscrapers.",
-    "image": "images/NewYork.webp"
+    "rating": 4.7,
+    "price": 1400,
+    "image": "https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 4,
     "name": "Rome",
     "country": "Italy",
     "continent": "Europe",
-    "temperature": "24°C",
-    "description": "Famous for the Colosseum and rich ancient history.",
-    "image": "images/rome.webp"
+    "rating": 4.8,
+    "price": 1100,
+    "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1096&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 5,
-    "name": "London",
-    "country": "United Kingdom",
-    "continent": "Europe",
-    "temperature": "16°C",
-    "description": "A city full of history, culture, and famous landmarks.",
-    "image": "images/london.webp"
-  },
-  {
-    "id": 6,
-    "name": "Dubai",
-    "country": "United Arab Emirates",
-    "continent": "Asia",
-    "temperature": "35°C",
-    "description": "Known for luxury shopping, skyscrapers, and desert adventures.",
-    "image": "images/dubai.webp"
-  },
-  {
-    "id": 7,
     "name": "Barcelona",
     "country": "Spain",
     "continent": "Europe",
-    "temperature": "27°C",
-    "description": "Famous for Gaudí architecture and Mediterranean beaches.",
-    "image": "images/barcelona.webp"
+    "rating": 4.7,
+    "price": 900,
+    "image": "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 6,
+    "name": "London",
+    "country": "UK",
+    "continent": "Europe",
+    "rating": 4.6,
+    "price": 1300,
+    "image": "https://images.unsplash.com/photo-1486299267070-83823f5448dd"
+  },
+  {
+    "id": 7,
+    "name": "Dubai",
+    "country": "UAE",
+    "continent": "Asia",
+    "rating": 4.9,
+    "price": 2000,
+    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c"
   },
   {
     "id": 8,
     "name": "Sydney",
     "country": "Australia",
     "continent": "Oceania",
-    "temperature": "25°C",
-    "description": "Home to the Sydney Opera House and beautiful harbors.",
-    "image": "images/sydney.webp"
+    "rating": 4.7,
+    "price": 2200,
+    "image": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9"
   },
   {
     "id": 9,
-    "name": "Bali",
-    "country": "Indonesia",
-    "continent": "Asia",
-    "temperature": "28°C",
-    "description": "A tropical paradise known for beaches and temples.",
-    "image": "images/bali.webp"
+    "name": "Rio de Janeiro",
+    "country": "Brazil",
+    "continent": "South America",
+    "rating": 4.6,
+    "price": 1500,
+    "image": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325"
   },
   {
     "id": 10,
     "name": "Cairo",
     "country": "Egypt",
     "continent": "Africa",
-    "temperature": "30°C",
-    "description": "Gateway to the Pyramids of Giza and ancient Egyptian history.",
-    "image": "images/cairo.webp"
+    "rating": 4.5,
+    "price": 1000,
+    "image": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368"
   },
   {
     "id": 11,
     "name": "Bangkok",
     "country": "Thailand",
     "continent": "Asia",
-    "temperature": "32°C",
-    "description": "Known for vibrant street markets and delicious cuisine.",
-    "image": "images/bangkok.webp"
+    "rating": 4.7,
+    "price": 950,
+    "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365"
   },
   {
     "id": 12,
-    "name": "Seoul",
-    "country": "South Korea",
-    "continent": "Asia",
-    "temperature": "23°C",
-    "description": "A modern city with rich culture and K-pop influence.",
-    "image": "images/seoul.webp"
+    "name": "Los Angeles",
+    "country": "USA",
+    "continent": "North America",
+    "rating": 4.6,
+    "price": 1600,
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
   },
   {
     "id": 13,
-    "name": "Rio de Janeiro",
-    "country": "Brazil",
-    "continent": "South America",
-    "temperature": "29°C",
-    "description": "Famous for Carnival, beaches, and Christ the Redeemer.",
-    "image": "images/rio.webp"
+    "name": "Istanbul",
+    "country": "Turkey",
+    "continent": "Europe/Asia",
+    "rating": 4.8,
+    "price": 1050,
+    "image": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200"
   },
   {
     "id": 14,
     "name": "Cape Town",
     "country": "South Africa",
     "continent": "Africa",
-    "temperature": "22°C",
-    "description": "Known for Table Mountain and spectacular coastal scenery.",
-    "image": "images/cape.webp"
+    "rating": 4.7,
+    "price": 1250,
+    "image": "https://images.unsplash.com/photo-1528127269322-539801943592"
   },
   {
     "id": 15,
-    "name": "Reykjavik",
-    "country": "Iceland",
-    "continent": "Europe",
-    "temperature": "10°C",
-    "description": "A popular destination for viewing the Northern Lights.",
-    "image": "images/reykjavik.webp"
+    "name": "Machu Picchu",
+    "country": "Peru",
+    "continent": "South America",
+    "rating": 5.0,
+    "price": 1700,
+    "image": "https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ]
