@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="GlobalTrek Travel destinations">
-<meta name="author" content="Ashley">
-
-<meta property="og:title" content="GlobalTrek Travel">
-<meta property="og:description" content="Explore countries around the world">
-
 <title>GlobalTrek | Destinations</title>
 
-<link rel="stylesheet" href="styles/style.css">
+<meta name="description" content="Explore countries and travel destinations around the world with GlobalTrek Travel. Discover places, cultures, and experiences.">
+<meta name="author" content="Ashley">
+
+<!-- Open Graph (REQUIRED) -->
+<meta property="og:title" content="GlobalTrek Travel Destinations">
+<meta property="og:description" content="Explore amazing countries around the world with detailed travel information and inspiration for your next trip.">
+<meta property="og:image" content="https://example.com/images/og-destinations.jpg">
+<meta property="og:url" content="https://example.com/destinations.html">
+
 <link rel="icon" href="images/favicon.ico">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles/reset.css">
+<link rel="stylesheet" href="styles/style.css">
+
 </head>
 
 <body>
 
 <header>
-  <h1>GlobalTrek Travel</h1>
+<h1>GlobalTrek Travel</h1>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="destinations.html" class="active">Destinations</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<nav>
+<a href="index.html">Home</a>
+<a href="destinations.html" class="active">Destinations</a>
+<a href="contact.html">Contact</a>
+</nav>
 </header>
 
 <main>
 
-<h2>Explore Countries</h2>
+<h1>Explore Countries</h1>
 
-<div class="grid"></div>
+<script type="module" src="scripts/destinations.js"></script>
 
-<dialog id="details"></dialog>
+<section class="grid" id="cardsContainer"></section>
+
+<dialog id="details" role="dialog" aria-label="Destination details"></dialog>
 
 </main>
 
 <footer>
 <p>&copy; 2026 GlobalTrek</p>
 <a href="attributions.html">Attributions</a>
-<a href="https://youtube.com">Project Video</a>
 </footer>
-
-<script type="module" src="scripts/destinations.js"></script>
 
 </body>
 </html>
