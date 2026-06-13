@@ -4,49 +4,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Destinations | GlobalTrek</title>
+<title>Global Trek | Destinations</title>
+<meta name="description" content="Browse and search 15 travel destinations around the world.">
+<meta name="author" content="Student Project">
 
-<meta name="description" content="Explore 15 world destinations with favorites system">
-<meta name="author" content="Ashley">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/responsive.css">
 
-<meta property="og:title" content="GlobalTrek Destinations">
-<meta property="og:description" content="Browse and save your favorite travel destinations">
-<meta property="og:image" content="https://example.com/og.jpg">
-<meta property="og:url" content="https://example.com/destinations.html">
-
-<link rel="stylesheet" href="styles/reset.css">
-<link rel="stylesheet" href="styles/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header>
-<h1>GlobalTrek Travel</h1>
+<h1>Destinations</h1>
 <nav>
 <a href="index.html">Home</a>
-<a href="destinations.html" class="active">Destinations</a>
+<a href="destinations.html">Destinations</a>
 <a href="contact.html">Contact</a>
 </nav>
 </header>
 
 <main>
 
-<h1>Explore Countries</h1>
-<input id="search" placeholder="Search destination">
+<input type="text" id="search" placeholder="Search destination...">
 
-<div id="grid" class="grid"></div>
+<section id="grid" class="grid"></section>
 
+<!-- MODAL -->
 <div id="modal" class="modal">
   <div id="modalContent" class="modal-content"></div>
 </div>
 
-<script type="module" src="js/destinations.js"></script>
 </main>
 
 <footer>
-<p>© 2026 GlobalTrek</p>
+<p>© 2026 Global Trek</p>
 </footer>
 
-<script type="module" src="scripts/destinations.js"></script>
+<script type="module" src="js/destinations.js"></script>
+
 </body>
 </html>
