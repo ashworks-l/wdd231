@@ -4,14 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Global Trek | Contact</title>
-<meta name="description" content="Contact Global Trek for travel inquiries and feedback.">
-<meta name="author" content="Student Project">
+<title>Contact | GlobalTrek</title>
 
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/responsive.css">
+<meta name="description" content="Contact GlobalTrek Travel for questions, feedback or travel information.">
+<meta name="author" content="Ashley">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+<link rel="icon" href="images/favicon.ico">
+
+<link rel="stylesheet" href="styles/reset.css">
+<link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
@@ -21,28 +22,29 @@
 <nav>
 <a href="index.html">Home</a>
 <a href="destinations.html">Destinations</a>
-<a href="contact.html">Contact</a>
+<a href="contact.html" class="active">Contact</a>
 </nav>
 </header>
 
 <main>
 
-<section class="intro">
-<h2>Get in Touch</h2>
-<p>Send us your travel questions or feedback.</p>
-</section>
+<form class="contact-container">
+<label>Name</label>
+<input type="text">
 
-<form action="attributions.html">
-  <input type="text" placeholder="Full Name" required>
-  <input type="email" placeholder="Email Address" required>
-  <textarea placeholder="Your message..." required></textarea>
-  <button type="submit">Send Message</button>
+<label>Email</label>
+<input type="email">
+
+<label>Message</label>
+<textarea></textarea>
+
+<button type="submit">Send</button>
 </form>
 
 </main>
 
 <footer>
-<p>© 2026 Global Trek</p>
+<p>&copy; 2026 GlobalTrek</p>
 </footer>
 
 </body>
